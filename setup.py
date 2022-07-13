@@ -3,6 +3,8 @@ theme-material-darcula setup
 """
 import json
 import os
+# import conda_build.bdist_conda
+
 
 from jupyter_packaging import (
     create_cmdclass, install_npm, ensure_targets,
@@ -63,6 +65,7 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     cmdclass=cmdclass,
+    # distclass=conda_build.bdist_conda.CondaDistribution,
     packages=setuptools.find_packages(),
     install_requires=[
         "jupyterlab>=3.0.0rc13,==3.*",
