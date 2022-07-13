@@ -1,6 +1,5 @@
 # @adhadse/theme-material-darcula
 
-[![Build Status](https://travis-ci.com/adhadse/theme-material-darcula.svg?branch=master)](https://travis-ci.org/adhadse/theme-material-darcula)
 [![npm](https://img.shields.io/pypi/v/theme-material-darcula.svg)](https://pypi.org/project/theme-darcula/)
 [![npm](https://img.shields.io/npm/v/@adhadse/theme-material-darcula.svg)](https://www.npmjs.com/package/@adhadse/theme-material-darcula)
 
@@ -50,12 +49,14 @@ Enable dark scrollbars by clicking on **Settings** -> **JupyterLab Theme** -> **
 For a development install (requires JupyterLab 2.0.0 or later), do the following in the repository directory:
 
 ```bash
+jlpm install
 jlpm build:dev
 ```
 
 To rebuild the package and the JupyterLab app (if using Anaconda, run from specific environment, will probably require administrator priviledges):
 
 ```bash
+jlpm install
 jlpm build:prod
 jlpm install:extension
 jupyter lab build

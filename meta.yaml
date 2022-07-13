@@ -1,0 +1,30 @@
+package:
+  name: "theme-material-darcula"
+  version: "3.2.0"
+
+source:
+  git_rev: v3.2.0
+  git_url: https://github.com/adhadse/theme-material-darcula
+
+requirements:
+  host:
+    - python
+  build:
+    - python
+    - setuptools
+    - wheel
+    - jupyter-packaging>=0.7.0
+  run:
+    - python
+    - jupyterlab>=3.0.0
+
+about:
+  home: https://github.com/adhadse/theme-material-darcula
+  license: BSD
+  license_family: BSD
+  license_file: LICENSE
+  summary: "Darcula theme for JupyterLab with Material Design. Modelled after the classic Intellij theme."
+
+extra:
+  recipe-maintainers:
+    - adhadse
