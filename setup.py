@@ -2,31 +2,34 @@
 theme-material-darcula setup
 """
 import json
-import os
+from pathlib import Path
 # import conda_build.bdist_conda
 
 
 from jupyter_packaging import (
-    create_cmdclass, install_npm, ensure_targets,
+    create_cmdclass, 
+    install_npm, 
+    ensure_targets,
     combine_commands,
+    skip_if_exists
 )
 import setuptools
 
-HERE = os.path.abspath(os.path.dirname(__file__))
+HERE = Path(__file__).parent.resolve()
 
 # The name of the project
 name = "theme-material-darcula"
 
 # Get our version
-with open(os.path.join(HERE, 'package.json')) as f:
+with (HERE / "package.json").open() as f:
     version = json.load(f)['version']
 
-lab_path = os.path.join(HERE, name, "labextension")
+lab_path = HERE / name / "labextension"
 
 # Representative files that should exist after a successful build
 jstargets = [
-    os.path.join(HERE, "lib", "index.js"),
-    os.path.join(lab_path, "package.json"),
+    str(HERE / "lib" / "index.js"),
+    str(lab_path / "package.json"),
 ]
 
 package_data_spec = {
@@ -38,8 +41,8 @@ package_data_spec = {
 labext_name = "@adhadse/theme-material-darcula"
 
 data_files_spec = [
-    ("share/jupyter/labextensions/%s" % labext_name, lab_path, "**"),
-    ("share/jupyter/labextensions/%s" % labext_name, HERE, "install.json"),
+    ("share/jupyter/labextensions/%s" % labext_name, str(lab_path), "**"),
+    ("share/jupyter/labextensions/%s" % labext_name, str(HERE), "install.json"),
 ]
 
 cmdclass = create_cmdclass(
@@ -48,10 +51,16 @@ cmdclass = create_cmdclass(
     data_files_spec=data_files_spec
 )
 
-cmdclass["jsdeps"] = combine_commands(
+js_command = combine_commands(
     install_npm(HERE, build_cmd="build:prod", npm=["jlpm"]),
     ensure_targets(jstargets),
 )
+
+is_repo = (HERE / ".git").exists()
+if is_repo:
+    cmdclass["jsdeps"] = js_command
+else:
+    cmdclass["jsdeps"] = skip_if_exists(jstargets, js_command)
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -65,12 +74,12 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     cmdclass=cmdclass,
+    zip_safe=False,
     # distclass=conda_build.bdist_conda.CondaDistribution,
     packages=setuptools.find_packages(),
     install_requires=[
         "jupyterlab>=3.0.0rc13,==3.*",
     ],
-    zip_safe=False,
     include_package_data=True,
     python_requires=">=3.6",
     license="BSD-3-Clause",
@@ -83,6 +92,7 @@ setup_args = dict(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9"
         "Framework :: Jupyter",
     ],
 )

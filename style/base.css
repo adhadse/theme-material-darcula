@@ -1,3 +1,15 @@
+body {
+  background: var(--jp-layout-color1);
+}
+
+#jp-main-dock-panel {
+  padding: 0;
+}
+
+#jp-left-stack {
+  border-bottom: var(--jp-border-width) solid var(--jp-border-color0);
+}
+
 .jp-InputArea-editor {
   border: none;
   border-radius: 2px;
@@ -54,6 +66,11 @@
   padding: 0.3rem 0;
 }
 
+.jp-Completer-item.jp-mod-active {
+  background: var(--md-blue-500);
+  color: white;
+}
+
 .jp-mod-active .jp-Completer-typeExtended {
   color: inherit;
 }
@@ -70,3 +87,47 @@
   margin-top: 0;
 }
 
+.jp-DirListing-headerItem {
+  background-color: var(--jp-layout-color1) !important;
+}
+
+.jp-DirListing-item {
+  cursor: pointer;
+}
+
+.jp-PluginList {
+  background-color: var(--jp-layout-color1);
+  padding-right: 0;
+}
+
+.jp-DirListing-item.jp-mod-selected {
+  box-shadow: none;
+  background: var(--jp-listitem-mod-selected);
+  color: var(--jp-ui-font-color0);
+  border-radius: 0;
+}
+
+.jp-PluginList-entry.jp-mod-selected {
+  box-shadow: none!important;
+  background-color: var(--jp-listitem-mod-selected);
+  color: var(--jp-ui-font-color0);
+  border-radius: 0;
+}
+
+.jp-PluginList .jp-mod-selected .jp-SelectedIndicator {
+  visibility: hidden;
+}
+
+/* Inner editor panel should not have left, right and bottom border */
+.lm-DockPanel-widget,
+.lm-TabPanel-stackedPanel {
+    background: var(--jp-layout-color0);
+    border-right: none !important;
+    border-left: none !important;
+    border-bottom: var(--jp-border-width) solid var(--jp-border-color0);
+}
+
+/* switch color for simple layout */
+.jp-switch-track {
+  background-color: var(--md-grey-400);
+}

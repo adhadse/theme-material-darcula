@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------
+| Copyright (c) Max Klein.
+| Copyright (c) Anurag Dhadse.
+| Distributed under the terms of the Modified BSD License.
+|----------------------------------------------------------------------------*/
+
+.lm-DockPanel-tabBar .lm-TabBar-tab.jp-mod-current:before {
+    background: transparent;
+}
+
+.lm-DockPanel-tabBar .lm-TabBar-tab,
+.lm-TabPanel-tabBar .lm-TabBar-tab {
+    animation: append-animate 0.3s cubic-bezier(1, 0, 0, 1);
+    border: none;
+}
+
+@keyframes append-animate {
+    from {
+        transform: translateX(-5%);
+        opacity: 0;
+        box-shadow: 0 0 5px 0px rgb(0 0 0 / 40%);
+        clip-path: inset(0px -5px 0px -5px);
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+        box-shadow: 0 0 5px 0px rgb(0 0 0 / 40%);
+        clip-path: inset(0px -5px 0px -5px);
+    }
+}
+
+.lm-DockPanel-tabBar,
+.lm-TabPanel-tabBar {
+    border-bottom: none;
+}
+
+/* Tab and tool bar under tab has same color `--jp-layout-color0` */
+.lm-DockPanel-tabBar .lm-TabBar-tab.lm-mod-current {
+    background: var(--jp-layout-color0);
+    box-shadow: 0 0 5px 0px rgb(0 0 0 / 40%);
+    clip-path: inset(0px -5px 0px -5px);
+    animation: append-animate 0.3s cubic-bezier(1, 0, 0, 1);
+}
+
+.jp-Toolbar {
+    border-bottom: transparent;
+    background: var(--jp-layout-color0);
+}
+
+.lm-TabBar .lm-TabBar-addButton {
+    background-color: var(--jp-layout-color1);
+}
+
+/* But toolbar on Launcher don't have box-shadow */
+.lm-Widget.p-Widget.jp-Toolbar.jp-Toolbar-micro {
+    box-shadow: none;
+}
+
+/* tab separator */
+.lm-DockPanel-tabBar .lm-TabBar-tab:not(.jp-mod-current):not(:hover)::after,
+.lm-TabPanel-tabBar .lm-TabBar-tab:not(.jp-mod-current):not(:hover)::after {
+    content: '';
+    height: 70%;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    top: auto;
+    background-color: var(--md-grey-600);
+}
