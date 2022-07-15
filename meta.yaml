@@ -3,8 +3,12 @@ package:
   version: "3.2.0"
 
 source:
+  path: .
   git_rev: v3.2.0
   git_url: https://github.com/adhadse/theme-material-darcula
+
+build:
+    script: python setup.py install -f
 
 requirements:
   host:
@@ -13,7 +17,7 @@ requirements:
     - python
     - setuptools
     - wheel
-    - jupyter-packaging>=0.7.0
+    - jupyter-packaging
   run:
     - python
     - jupyterlab>=3.0.0

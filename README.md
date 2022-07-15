@@ -8,8 +8,6 @@ A fork of [telamonian/theme-darcula](https://github.com/telamonian/theme-darcula
 Darcula theme for Jupyterlab with Material design. Modelled after the classic Intellij theme. Now with support for all JupyterLab 2.x and 3.x versions!
 
 ![darcula_preview](darcula_preview.png)
-![](2.png)
-![](3.png)
 
 ## Prerequisites
 
@@ -60,6 +58,12 @@ jlpm install
 jlpm build:prod
 jlpm install:extension
 jupyter lab build
+```
+
+To build conda package use:
+
+```bash
+conda build .
 ```
 
 ## History
