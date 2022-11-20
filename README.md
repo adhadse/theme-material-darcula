@@ -1,9 +1,8 @@
 # @adhadse/theme-material-darcula
 
+[![tests](https://github.com/jupyter-lsp/jupyterlab-lsp/workflows/CI/badge.svg)](https://github.com/adhadse/theme-material-darcula/actions?query=workflow%3ACI+branch%3Amaster)
 [![npm](https://img.shields.io/pypi/v/theme-material-darcula.svg)](https://pypi.org/project/theme-darcula/)
 [![npm](https://img.shields.io/npm/v/@adhadse/theme-material-darcula.svg)](https://www.npmjs.com/package/@adhadse/theme-material-darcula)
-
-A fork of [telamonian/theme-darcula](https://github.com/telamonian/theme-darcula).
 
 Darcula theme for Jupyterlab with Material design. Modelled after the classic Intellij theme. Now with support for all JupyterLab 2.x, 3.x, and 4.x versions!
 
@@ -38,10 +37,6 @@ conda install -c conda-forge theme-material-darcula
 jupyter labextension install @adhadse/theme-material-darcula
 ```
 
-## Dark scrollbars
-
-Enable dark scrollbars by clicking on **Settings** -> **JupyterLab Theme** -> **Theme Scrollbars** in the JupyterLab menus.
-
 ## Development
 
 For a development install (requires JupyterLab 2.0.0 or later), do the following in the repository directory:
@@ -66,11 +61,9 @@ To build conda package use:
 conda build .
 ```
 
-## Want to contribute
-If you have any visual issue that's eye soring. Just open a new issue and let's discuss.
+## Want to contribute?
+If you find any visual inconsistency that's eye soring. Just open a new issue and let's discuss.
 
 ## History
 
-This was the first JupyterLab theme that included dark scrollbars. As of JupyterLab 1.0, the dark scrollbars feature from this theme was incorporated into JupyterLab core, as part of [@jupyterlab/application/style/scrollbar.css](https://github.com/jupyterlab/jupyterlab/blob/6d5240dda71fb3d12814e8b88b09e94e23d42875/packages/application/style/scrollbar.css).
-
-JupyterLab itself now supports dark scrollbars for dark themes in Chrome, Firefox, and Safari. See [here](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar) and [here](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars) for more info on how this is done.
+A fork of [telamonian/theme-darcula](https://github.com/telamonian/theme-darcula). The original theme is still available. Somewhere during the development the theme diverged from the original one in look and feel so much that I planned to ship this as a completely different package. 

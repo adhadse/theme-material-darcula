@@ -69,7 +69,7 @@ setup_args = dict(
     name=name,
     version=version,
     url="https://github.com/adhadse/theme-material-darcula",
-    author="Max Klein, Anurag Dhadse",
+    author="Anurag Dhadse",
     description="Darcula theme for JupyterLab with Material design. Modelled after the classic Intellij theme.",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -92,7 +92,7 @@ setup_args = dict(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9"
+        "Programming Language :: Python :: 3.9",
         "Framework :: Jupyter",
     ],
 )

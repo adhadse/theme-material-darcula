@@ -1,6 +1,6 @@
 {
   "name": "@adhadse/theme-material-darcula",
-  "version": "4.0.0",
+  "version": "1.0.0",
   "description": "Darcula theme for JupyterLab with Material Design. Modelled after the classic Intellij theme.",
   "keywords": [
     "jupyter",
@@ -12,8 +12,7 @@
     "url": "https://github.com/adhadse/theme-material-darcula/issues"
   },
   "license": "BSD-3-Clause",
-  "author": "Max Klein",
-  "contributors": ["Anurag Dhadse"],
+  "author": "Anurag Dhadse",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
     "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"

@@ -1,5 +1,4 @@
 /*-----------------------------------------------------------------------------
-| Copyright (c) Max Klein.
 | Copyright (c) Anurag Dhadse.
 | Distributed under the terms of the Modified BSD License.
 |----------------------------------------------------------------------------*/
@@ -10,10 +9,18 @@
 
 .lm-DockPanel-tabBar .lm-TabBar-tab,
 .lm-TabPanel-tabBar .lm-TabBar-tab {
+    background: inherit;
     animation: append-animate 0.3s cubic-bezier(1, 0, 0, 1);
     border: none;
 }
 
+/* highlight tabs on hover; otherwise mix it with the whole tabBar */
+.lm-DockPanel-tabBar .lm-TabBar-tab:not(.lm-TabBar-tab.lm-mod-current):hover,
+.lm-TabPanel-tabBar .lm-TabBar-tab:not(.lm-TabBar-tab.lm-mod-current):hover {
+    background: var(--jp-layout-color2)
+}
+
+/* animations for tab opening */
 @keyframes append-animate {
     from {
         transform: translateX(-5%);
@@ -43,6 +50,7 @@
     animation: append-animate 0.3s cubic-bezier(1, 0, 0, 1);
 }
 
+/* Toolbar to the side that launches launcher, new folder or upload button */
 .jp-Toolbar {
     border-bottom: transparent;
     background: none;
