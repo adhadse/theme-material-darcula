@@ -105,7 +105,7 @@ body {
   background: var(--jp-listitem-mod-selected);
   color: var(--jp-ui-font-color0);
   border-radius: 0;
-}
+}    cursor: pointer;
 
 .jp-PluginList-entry.jp-mod-selected {
   box-shadow: none!important;
@@ -130,4 +130,32 @@ body {
 /* switch color for simple layout */
 .jp-switch-track {
   background-color: var(--md-grey-400);
+}
+
+/* add padding to Ctrl-F pop-up */
+.jp-DocumentSearch-overlay-row {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+/* Make search button more center aligned to their parent */
+.jp-DocumentSearch-button-content {
+  text-align: center;
+  vertical-align: sub;
+}
+
+.lm-TabBar-tabCloseIcon {
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+/* Fix the ugly tab close button hover fill */
+/* set fill of tab close button the same */
+.jp-icon-hover :hover .jp-icon-accent2-hover[fill] {
+  fill: var(--jp-inverse-layout-color3);
+}
+
+/* and set the background of tab close button to light grey */
+.jp-icon-hover :hover .jp-icon3-hover[fill] {
+  fill: none;
 }

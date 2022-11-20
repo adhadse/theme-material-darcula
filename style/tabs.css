@@ -50,6 +50,8 @@
 
 .lm-TabBar .lm-TabBar-addButton {
     background-color: var(--jp-layout-color1);
+    margin-left: 2px;
+    cursor: pointer;
 }
 
 /* But toolbar on Launcher don't have box-shadow */
