@@ -45,7 +45,7 @@
 
 .jp-Toolbar {
     border-bottom: transparent;
-    background: var(--jp-layout-color0);
+    background: none;
 }
 
 .lm-TabBar .lm-TabBar-addButton {

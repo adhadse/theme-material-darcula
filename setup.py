@@ -78,7 +78,7 @@ setup_args = dict(
     # distclass=conda_build.bdist_conda.CondaDistribution,
     packages=setuptools.find_packages(),
     install_requires=[
-        "jupyterlab>=3.0.0rc13,==3.*",
+        "jupyterlab>=3.0.0"
     ],
     include_package_data=True,
     python_requires=">=3.6",

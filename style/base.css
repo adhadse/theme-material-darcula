@@ -30,6 +30,17 @@ body {
   background-color: #222;
 }
 
+/* fix gutter background */
+.cm-s-jupyter .CodeMirror-activeline-background, .cm-s-jupyter .CodeMirror-gutter {
+  background-color: #222;
+}
+
+/* remove right border from the gutter */
+.CodeMirror-gutters {
+  border-right: none !important;
+  background-color: transparent !important;
+}
+
 .jp-Cell {
   margin: 1rem !important;
   padding: 0 !important;
@@ -43,6 +54,10 @@ body {
 
 .cm-lsp-highlight, span.CodeMirror-selectedtext {
   border-radius: 2px;
+}
+
+.cm-lsp-highlight {
+  background-color: #13bd4330;
 }
 
 .jp-Collapser {
@@ -62,6 +77,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.jp-CodeCell.jp-mod-outputsScrolled .jp-Cell-outputArea::after {
+  box-shadow: none;
+}
+
 .jp-OutputArea-output pre {
   padding: 0.3rem 0;
 }
@@ -71,8 +90,13 @@ body {
   color: white;
 }
 
+.CodeMirror.cm-s-jupyter {
+  background: #222;
+  color: var(--jp-content-font-color1);
+}
+
 .jp-mod-active .jp-Completer-typeExtended {
-  color: inherit;
+  color: var(--jp-content-font-color1);
 }
 
 .jp-RenderedText pre .ansi-yellow-bg {
@@ -105,7 +129,7 @@ body {
   background: var(--jp-listitem-mod-selected);
   color: var(--jp-ui-font-color0);
   border-radius: 0;
-}    cursor: pointer;
+}    
 
 .jp-PluginList-entry.jp-mod-selected {
   box-shadow: none!important;

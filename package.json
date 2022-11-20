@@ -1,6 +1,6 @@
 {
   "name": "@adhadse/theme-material-darcula",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "description": "Darcula theme for JupyterLab with Material Design. Modelled after the classic Intellij theme.",
   "keywords": [
     "jupyter",
@@ -43,11 +43,11 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "^2.0.0 || ^3.0.0",
-    "@jupyterlab/apputils": "^2.0.0 || ^3.0.0"
+    "@jupyterlab/application": "^2.0.0 || ^3.0.0 || ^4.0.0",
+    "@jupyterlab/apputils": "^2.0.0 || ^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "^3.0.9",
+    "@jupyterlab/builder": "^3.0.0 || ^4.0.0",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "eslint": "^7.5.0",
