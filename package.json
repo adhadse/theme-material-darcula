@@ -1,7 +1,7 @@
 {
   "name": "@adhadse/theme-material-darcula",
-  "version": "1.0.0",
-  "description": "Darcula theme for JupyterLab with Material Design. Modelled after the classic Intellij theme.",
+  "version": "1.0.2",
+  "description": "A Jupyterlab theme inspired from JetBrains IDE's Darcula scheme and Material Design",
   "keywords": [
     "jupyter",
     "jupyterlab",
