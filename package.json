@@ -1,7 +1,7 @@
 {
   "name": "@adhadse/theme-material-darcula",
-  "version": "1.0.2",
-  "description": "A Jupyterlab theme inspired from JetBrains IDE's Darcula scheme and Material Design",
+  "version": "1.0.3",
+  "description": "A Jupyterlab theme inspired by JetBrains IDE's Darcula scheme and Material Design.",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -31,7 +31,7 @@
     "build:lib": "tsc",
     "clean": "jlpm run clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
-    "clean:labextension": "rimraf theme-darcula/labextension",
+    "clean:labextension": "rimraf theme-material-darcula/labextension",
     "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
     "eslint": "eslint . --ext .ts,.tsx --fix",
     "eslint:check": "eslint . --ext .ts,.tsx",

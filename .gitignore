@@ -59,3 +59,5 @@ junit.xml
 
 theme-material-darcula/labextension
 condavenv/
+
+.fuse_*
