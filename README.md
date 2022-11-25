@@ -2,11 +2,12 @@
 
 [![tests](https://github.com/jupyter-lsp/jupyterlab-lsp/workflows/CI/badge.svg)](https://github.com/adhadse/theme-material-darcula/actions?query=workflow%3ACI+branch%3Amaster)
 [![npm](https://img.shields.io/pypi/v/theme-material-darcula.svg)](https://pypi.org/project/theme-material-darcula/)
+![Anaconda.org](https://anaconda.org/conda-forge/theme-material-darcula/badges/version.svg)
 <!-- [![npm](https://img.shields.io/npm/v/@adhadse/theme-material-darcula.svg)](https://www.npmjs.com/package/@adhadse/theme-material-darcula) -->
 
-A Jupyterlab theme inspired from JetBrains IDE's Darcula scheme and Material Design. Now with support for all JupyterLab 2.x, 3.x, and 4.x versions!
+A Jupyterlab theme inspired by JetBrains IDE's Darcula scheme and Material Design. Now with support for all JupyterLab 2.x, 3.x, and 4.x versions!
 
-![darcula_preview](darcula_preview.png)
+![material-darcula](theme-material-darcula-github-description.png)
 
 ## Prerequisites
 
@@ -24,6 +25,11 @@ With `conda`:
 
 ```bash
 conda install -c conda-forge theme-material-darcula
+```
+With `mamba`:
+
+```bash
+mamba install -c conda-forge theme-material-darcula
 ```
 
 **For Jupyterlab < 3**

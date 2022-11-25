@@ -1,10 +1,10 @@
 package:
   name: "theme-material-darcula"
-  version: "1.0.2"
+  version: "1.0.3"
 
 source:
   path: .
-  git_rev: v1.0.2
+  git_rev: v1.0.3
   git_url: https://github.com/adhadse/theme-material-darcula
 
 build:
@@ -27,7 +27,7 @@ about:
   license: BSD
   license_family: BSD
   license_file: LICENSE
-  summary: "A Jupyterlab theme inspired from JetBrains IDE's Darcula scheme and Material Design."
+  summary: "A Jupyterlab theme inspired by JetBrains IDE's Darcula scheme and Material Design."
 
 extra:
   recipe-maintainers:
