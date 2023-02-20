@@ -1,6 +1,6 @@
 # @adhadse/theme-material-darcula
 
-[![tests](https://github.com/jupyter-lsp/jupyterlab-lsp/workflows/CI/badge.svg)](https://github.com/adhadse/theme-material-darcula/actions?query=workflow%3ACI+branch%3Amaster)
+![Build](https://github.com/adhadse/theme-material-darcula/actions/workflows/build.yml/badge.svg)
 [![npm](https://img.shields.io/pypi/v/theme-material-darcula.svg)](https://pypi.org/project/theme-material-darcula/)
 ![Anaconda.org](https://anaconda.org/conda-forge/theme-material-darcula/badges/version.svg)
 <!-- [![npm](https://img.shields.io/npm/v/@adhadse/theme-material-darcula.svg)](https://www.npmjs.com/package/@adhadse/theme-material-darcula) -->
