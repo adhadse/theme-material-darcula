@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION=1.0.4
+VERSION=1.0.5
 
 ## force version in package.json to match VERSION from this script
 npm --no-git-tag-version version $VERSION --force --allow-same-version

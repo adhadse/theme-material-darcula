@@ -1,10 +1,10 @@
 package:
   name: "theme-material-darcula"
-  version: "1.0.4"
+  version: "1.0.5"
 
 source:
   path: .
-  git_rev: v1.0.4
+  git_rev: v1.0.5
   git_url: https://github.com/adhadse/theme-material-darcula
 
 build:

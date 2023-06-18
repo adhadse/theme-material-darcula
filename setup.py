@@ -2,8 +2,7 @@
 theme-material-darcula setup
 """
 import json
-from pathlib import Path
-# import conda_build.bdist_conda
+import os	
 
 
 from jupyter_packaging import (
@@ -15,21 +14,21 @@ from jupyter_packaging import (
 )
 import setuptools
 
-HERE = Path(__file__).parent.resolve()
+HERE = os.path.abspath(os.path.dirname(__file__))
 
 # The name of the project
 name = "theme-material-darcula"
 
 # Get our version
-with (HERE / "package.json").open() as f:
+with open(os.path.join(HERE, 'package.json')) as f:
     version = json.load(f)['version']
 
-lab_path = HERE / name / "labextension"
+lab_path = os.path.join(HERE, name, "labextension")	
 
 # Representative files that should exist after a successful build
 jstargets = [
-    str(HERE / "lib" / "index.js"),
-    str(lab_path / "package.json"),
+    os.path.join(HERE, "lib", "index.js"),	
+    os.path.join(lab_path, "package.json"),
 ]
 
 package_data_spec = {
@@ -41,8 +40,8 @@ package_data_spec = {
 labext_name = "@adhadse/theme-material-darcula"
 
 data_files_spec = [
-    ("share/jupyter/labextensions/%s" % labext_name, str(lab_path), "**"),
-    ("share/jupyter/labextensions/%s" % labext_name, str(HERE), "install.json"),
+    ("share/jupyter/labextensions/%s" % labext_name, lab_path, "**"),
+    ("share/jupyter/labextensions/%s" % labext_name, HERE, "install.json"),
 ]
 
 cmdclass = create_cmdclass(
@@ -51,16 +50,16 @@ cmdclass = create_cmdclass(
     data_files_spec=data_files_spec
 )
 
-js_command = combine_commands(
+cmdclass["jsdeps"] = combine_commands(
     install_npm(HERE, build_cmd="build:prod", npm=["jlpm"]),
     ensure_targets(jstargets),
 )
 
-is_repo = (HERE / ".git").exists()
-if is_repo:
-    cmdclass["jsdeps"] = js_command
-else:
-    cmdclass["jsdeps"] = skip_if_exists(jstargets, js_command)
+# is_repo = (HERE / ".git").exists()
+# if is_repo:
+#     cmdclass["jsdeps"] = js_command
+# else:
+#     cmdclass["jsdeps"] = skip_if_exists(jstargets, js_command)
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -74,8 +73,7 @@ setup_args = dict(
     long_description=long_description,
     long_description_content_type="text/markdown",
     cmdclass=cmdclass,
-    zip_safe=False,
-    # distclass=conda_build.bdist_conda.CondaDistribution,
+    # zip_safe=False,
     packages=setuptools.find_packages(),
     install_requires=[
         "jupyterlab>=3.0.0"
